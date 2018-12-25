@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="javascript/jquery-3.3.1.min.js"></script>
+    <script src="http://momentjs.com/downloads/moment.js"></script>
+    <script type="text/javascript" src="javascript/index.js"></script>
+    <meta charset="UTF-8">
+    <title>Task</title>
+</head>
+<body>
+<form id="comment">
+    <p>
+        <label>Имя:</label>
+        <input type="text" required placeholder="Ваше имя"  id="author" >
+    </p>
+    <p>Время: </p>
+    <p>
+        <label>Комментарий:</label>
+        <br>
+        <textarea id="text" cols="50" rows="5"></textarea>
+    </p>
+    <p>
+        <input type="submit" value="Отправить">
+    </p>
+</form>
+<form id="sort">
+    <select  id="sortByData">
+        <option value="">Сортировать дату по</option>
+        <option value="1">Возрастанию</option>
+        <option value="-1">Убыванию</option>
+    </select>
+</form>
+<form id="search">
+    <input type="text" id="textSearch">
+    <input type="submit" value="Найти">
+</form>
+
+<form id="resultSearch">
+    <h1>Результат поиска:</h1>
+</form>
+<form id="result">
+</form>
+</body>
+</html>

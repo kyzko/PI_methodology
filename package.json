@@ -1,0 +1,25 @@
+{
+  "name": "fit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start" : "nodemon app.js",
+    "test": "mocha text/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seintwill"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "config": "^2.0.1",
+    "express": "^4.16.3",
+    "moment": "^2.22.2",
+    "mongodb": "^3.1.6",
+    "nodemon": "^1.18.4",
+    "path": "^0.12.7"
+  }
+}
