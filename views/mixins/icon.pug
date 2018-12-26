@@ -1,0 +1,13 @@
+mixin icon(icon, options)
+	- options = _({type: 'button'}).extend(options);
+	- var classes = ['icon__' + icon];
+
+	if options.type
+		- classes.push(options.type + '_icon');
+
+	if options.accent
+		- classes.push(options.type + '_icon__accent');
+
+	span&attributes(attributes).icon(class=classes)
+		svg.icon_svg
+			use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#icon-' + icon)

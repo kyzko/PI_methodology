@@ -30,4 +30,5 @@ module.exports = function (app, client) {
             res.json(result);
         })
     });
+
 };

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+form#comment
+	p
+		label Имя:
+		input#author(type='text', required='', placeholder='Ваше имя')
+	p Время:
+	p
+		label Комментарий:
+		br
+		textarea#text(cols='50', rows='5')
+	p
+		input(type='submit', value='Отправить')
+form#sort
+	select#sortByData
+		option(value='') Сортировать дату по
+		option(value='1') Возрастанию
+		option(value='-1') Убыванию
+form#search
+	input#textSearch(type='text')
+	input(type='submit', value='Найти')
+
