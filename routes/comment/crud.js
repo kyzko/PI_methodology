@@ -17,8 +17,6 @@ module.exports = function (app, client) {
     });
 
     app.post('/api/comment', jsonParser, function (req, res) {
-        console.log(`POST url = ${req.originalUrl}`);
-        console.log(` author = ${req.body.author}`);
         let data = {
             author: req.body.author,
             text: req.body.text,

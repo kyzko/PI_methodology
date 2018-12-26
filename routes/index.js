@@ -1,8 +1,10 @@
-let commentCrud = require('./comment/crud'),
-    commentSearch = require('./comment/search');
+let _ = require('underscore');
+
+let routes = ['comment'];
 
 module.exports = function (app, client) {
-    commentCrud(app, client);
-    commentSearch(app, client);
+    _(routes).each(function (name) {
+        require('./' + name)(app, client)
+    });
     return app;
 };
