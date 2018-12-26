@@ -1,0 +1,26 @@
+mixin tileGalleryImage(file, options)
+	-
+		var imgSize = {
+		width: (240 * options.width) + ((options.width - 1) * 9),
+		height: 150 * options.height + 10
+		};
+	- var imgClasses = [];
+	- var url;
+
+	if (options.height === 1)
+		- imgClasses.push('gallery-tile_image__size__small');
+	else
+		- imgClasses.push('gallery-tile_image__size__big');
+
+	if file.url
+		- url = file.url;
+	else
+		-
+			url = helpers.getFileUrl(file, _(imgSize).defaults({
+			params: {
+			crop: 'fill',
+			gravity: 'center'
+			}
+			}));
+
+	.gallery-tile_image(style='background-image: url(' + url + ')', class=imgClasses)

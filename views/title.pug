@@ -1,0 +1,31 @@
+mixin titleContent(options)
+	if options.link
+		if options.targetBlank
+			a.title_link(href=options.link, target=socialApp ? '' : '_blank') #{options.title}
+		else
+			a.title_link(href=options.link) #{options.title}
+	else
+		span.title_text #{options.title}
+
+mixin title(options)
+	- options = _({}).defaults(options)
+	- var classes = [];
+	- var tag = options.tag || 'div';
+
+	if options.noBorder
+		- classes.push('title__no-border');
+
+	if options.noBorderTop
+		- classes.push('title__no-border-top');
+
+	if options.noSpacing
+		- classes.push('title__no-spacing');
+
+	if options.theme
+		- classes.push('title__' + options.theme);
+
+	if options.size
+		- classes.push('title__' + options.size);
+
+	#{tag}.title(class=classes)
+		+titleContent(options)

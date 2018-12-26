@@ -1,0 +1,18 @@
+mixin promoBlockCard(promoBlock, options)
+	-
+		options = _({}).defaults(options, {
+		thumbnailWidth: 300,
+		thumbnailHeight: 217,
+		thumbnailFile: promoBlock.thumbnailFile,
+		thumbnailAlt: promoBlock.title,
+		url: promoBlock.url,
+		showShortText: true
+		});
+
+	include ./cardd
+	+baseEntityCard(options)
+		.entity-card_title
+			a.entity-card_title-link(href=promoBlock.url) #{promoBlock.title}
+
+		if promoBlock.shortText && options.showShortText
+			.entity-card_description #{promoBlock.shortText}

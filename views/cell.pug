@@ -1,0 +1,21 @@
+include ./image
+
+mixin tileGalleryCell(cell, parentWidth)
+	- parentWidth = parentWidth || cell.width;
+
+	if cell.cols
+		.gallery-tile_container.grid-noGutter
+			each col in cell.cols
+				- var colWidth = col.width / parentWidth * 12;
+
+				.gallery-tile_block(class='col-' + colWidth)
+					+tileGalleryCell(col)
+
+	else if cell.rows
+		.gallery-tile_container.grid-noGutter
+			each row in cell.rows
+				+tileGalleryCell(row, parentWidth)
+
+	else
+		if cell.file
+			+tileGalleryImage(cell.file, {width: cell.width, height: cell.height})

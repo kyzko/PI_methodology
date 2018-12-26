@@ -1,0 +1,86 @@
+mixin baseEntityCard(options)
+	- options = _({}).defaults(options, {size: 'medium', itemCol: true});
+	- var cardClasses = [];
+	- var linkClasses = [];
+	- var colClasses = [];
+	- var thumbnailClasses = [];
+	- var buttonClasses = [];
+	- var target = options.newBlank && !socialApp ? '_blank' : '';
+	- var params = {};
+
+	if options.size
+		- cardClasses.push('entity-card__size__' + options.size);
+	if options.theme
+		- cardClasses.push('entity-card__theme__' + options.theme);
+	if options.padding
+		- cardClasses.push('entity-card__padding');
+	if options.type
+		- cardClasses.push('entity-card__type__' + options.type);
+	if options.playIcon
+		- linkClasses.push('entity-card_thumbnail-link__movie');
+	if options.itemCol
+		- colClasses.push('entity-cards_item col');
+	if options.thumbnailSize
+		- thumbnailClasses.push('entity-card_thumbnail__size__' + options.thumbnailSize);
+
+	div(class=colClasses)
+		.entity-card.js-entity-card(
+		class=cardClasses,
+		data-entity-id=options.entityId,
+		data-entity-type=options.entityType,
+		data-type=options.type,
+		data-rubrics=options.rubricPaths
+		)
+			if _(['events', 'meanwhile']).contains(options.entityType)
+				block
+			else
+				.entity-card_thumbnail(class=thumbnailClasses)
+					a.entity-card_thumbnail-link(href=options.url, class=linkClasses, target=target)
+
+						include ../../../site/mixins/thumbnail
+
+						if options.theme
+							- var themeParams = {};
+
+							case options.theme
+								when 'multiple-portrait'
+									-
+										themeParams = {
+										width: 200,
+										height: 260
+										};
+
+								when 'multiple-landscape'
+									-
+										themeParams = {
+										width: 300,
+										height: 217
+										};
+
+							- params = _(params).extend(themeParams);
+
+						+thumbnail(options.thumbnailFile, {
+							params: _({}).defaults(params, {
+								width: options.thumbnailWidth,
+								height: options.thumbnailHeight,
+								crop: 'fill',
+								gravity: 'center'
+							}),
+							alt: options.thumbnailAlt,
+							type: options.thumbnailType
+						})
+
+						if options.playIcon
+
+							if options.buttonSize
+								- buttonClasses.push('button__' + options.buttonSize)
+							else
+								- buttonClasses.push('button__large-round')
+
+							.entity-card_thumbnail-overlay
+								.button.button__primary-frame.button__no-highlight(class=buttonClasses)
+									+icon('play', {type: 'button'})
+
+				block
+
+				.entity-card_voting.js-entity-card_voting
