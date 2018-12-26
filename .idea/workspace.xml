@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c1b3185-e542-47d7-b47f-fa95f96e35ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/comment.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/footer.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/header.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/index.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/mixins/icon.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/mixins/navigation.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/socials.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fit.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/comment/crud.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/comment/crud.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -134,8 +119,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/layout.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="22" />
+            <state relative-caret-position="390">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -284,7 +269,8 @@
       <path value="$PROJECT_DIR$/views/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1053" />
   </component>
@@ -403,15 +389,15 @@
       <workItem from="1539636297317" duration="83000" />
       <workItem from="1545285038309" duration="251000" />
       <workItem from="1545748278405" duration="1654000" />
-      <workItem from="1545807747612" duration="8062000" />
+      <workItem from="1545807747612" duration="9537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75989000" />
+    <option name="totallyTimeSpent" value="77464000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="-1" width="1926" height="1057" extended-state="6" />
+    <frame x="-3" y="-1" width="1926" height="1057" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1270427" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -437,6 +423,9 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/config/default.json">
@@ -593,8 +582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="22" />
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
